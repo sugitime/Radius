@@ -8,9 +8,31 @@ class RadiusPineapple extends Module
     public function route()
     {
         switch ($this->request->action) {
-            case 'getContents':    // If you request the action "getContents" from your Javascript, this is where the PHP will see it, and use the correct function
-            $this->getContents();  // $this->getContents(); refers to your private function that contains all of the code for your request.
-            break;                 // Break here, and add more cases after that for different requests.
+            case 'getContents':
+                $this->getContents();
+                break;
+            case 'handleDependancies':
+                $this->handleDependancies()
+                break;
+
+        }
+    }
+    protected function checkDependency($dependencyName)
+    {
+            return ($this->uciGet("radius.module.installed"));
+    }
+
+    private function handleDependancies()  // This is the function that will be executed when you send the request "getContents".
+    {
+        if(!$this->checkDependency("radius"))
+        {
+            $this->execBackground("/pineapple/modules/RadiusPineapple/scripts/dependencies.sh install ".$this->request->destination);
+            $this->response = array('success' => true);
+        }
+        else
+        {
+            $this->execBackground("/pineapple/modules/RadiusPineapple/scripts/dependencies.sh remove");
+            $this->response = array('success' => true);
         }
     }
 
