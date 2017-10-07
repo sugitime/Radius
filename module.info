@@ -1,6 +1,6 @@
 {
-    "title": "Module Maker",
-    "description": "An easy way to generate modules.",
+    "title": "Radius Pineapple",
+    "description": "Stand up a radius server for WPA2-Enterprise Attacks",
     "version": "1.0",
-    "author": "Foxtrot"
+    "author": "sugitime"
 }
