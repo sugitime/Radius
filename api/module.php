@@ -146,25 +146,16 @@ class Radius extends Module
 
     private function toggleradius()
     {
+        $this->configFile = $this->uciGet('radius.module.configfile');
         $interface = $this->getInterface($this->configFile);
+        $this->uciSet('radius.module.interface', $interface);
         if(!$this->checkRunning("hostapd-wpe"))
         {
-            $cmd1 = "airmon-ng start ".$interface;
-            $cmd2 = "cd /tmp && hostapd-wpe " . $this->configFile . " | tee -a /tmp/hostapd-wpe.scan";
-            if($this->logging) {
-                $this->log($cmd1);
-                $this->log($cmd2);
-            }
-            exec($cmd1);
-            exec($cmd2);
+            exec('/pineapple/modules/Radius/scripts/dependencies.sh start');
         }
         else
         {
-            exec("killall hostapd-wpe");
-            $interface = $this->getInterface($this->configFile);
-            exec("airmon-ng stop ".$interface."mon");
-            exec("iw dev wlan1mon del");
-            exec("iw phy phy1 interface add wlan1 type managed");
+            exec('/pineapple/modules/Radius/scripts/dependencies.sh stop');
         }
     }
 
@@ -193,6 +184,7 @@ class Radius extends Module
     {
         $configFile = $this->request->data;
         $this->configFile = $configFile;
+        $this->uciSet('radius.module.configfile', $configFile);
         $readHandler = fopen($configFile, "r");
         $content = fread($readHandler, filesize($configFile));
         fclose($readHandler);

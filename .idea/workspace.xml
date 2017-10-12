@@ -9,8 +9,9 @@
     <file path="/Dummy.txt" changelist="af04fe89-9b33-44ea-ac9f-939afe066c62" time="1507790236521" ignored="false" />
     <file path="/dependencies.sh" changelist="af04fe89-9b33-44ea-ac9f-939afe066c62" time="1507790348117" ignored="false" />
     <file path="/module.html" changelist="af04fe89-9b33-44ea-ac9f-939afe066c62" time="1507829401923" ignored="false" />
-    <file path="/module.php" changelist="af04fe89-9b33-44ea-ac9f-939afe066c62" time="1507840134005" ignored="false" />
+    <file path="/module.php" changelist="af04fe89-9b33-44ea-ac9f-939afe066c62" time="1507841485594" ignored="false" />
     <file path="/module.js" changelist="af04fe89-9b33-44ea-ac9f-939afe066c62" time="1507831306632" ignored="false" />
+    <file path="/hostapd-wep.sh" changelist="af04fe89-9b33-44ea-ac9f-939afe066c62" time="1507841810497" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,10 +40,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="module.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="module.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/module.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="156" column="13" selection-start="4853" selection-end="4853" vertical-scroll-proportion="0.5443038">
+            <state line="157" column="72" selection-start="4898" selection-end="4898" vertical-scroll-proportion="-10.625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hostapd-wep.sh" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts/hostapd-wep.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="24" selection-start="404" selection-end="404" vertical-scroll-proportion="0.25392985">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dependencies.sh" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/dependencies.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="16" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -88,10 +107,11 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/scripts/dependencies.sh" />
         <option value="$PROJECT_DIR$/module.html" />
         <option value="$PROJECT_DIR$/js/module.js" />
+        <option value="$PROJECT_DIR$/scripts/dependencies.sh" />
         <option value="$PROJECT_DIR$/api/module.php" />
+        <option value="$PROJECT_DIR$/scripts/hostapd-wep.sh" />
       </list>
     </option>
   </component>
@@ -290,13 +310,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scripts/dependencies.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="2" selection-start="483" selection-end="517" vertical-scroll-proportion="0.27206773">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/module.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="107" column="96" selection-start="6621" selection-end="6621" vertical-scroll-proportion="-26.583334">
@@ -326,7 +339,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/module.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="13" selection-start="4853" selection-end="4853" vertical-scroll-proportion="0.5443038">
+        <state line="157" column="72" selection-start="4898" selection-end="4898" vertical-scroll-proportion="-10.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/dependencies.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="16" selection-start="461" selection-end="461" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/hostapd-wep.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="24" selection-start="404" selection-end="404" vertical-scroll-proportion="0.25392985">
           <folding />
         </state>
       </provider>
