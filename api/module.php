@@ -150,7 +150,7 @@ class Radius extends Module
         if(!$this->checkRunning("hostapd-wpe"))
         {
             $cmd1 = "airmon-ng start ".$interface;
-            $cmd2 = "cd /tmp && hostapd-wpe " . $this->configFile;
+            $cmd2 = "cd /tmp && hostapd-wpe " . $this->configFile . " | tee -a /tmp/hostapd-wpe.scan";
             if($this->logging) {
                 $this->log($cmd1);
                 $this->log($cmd2);

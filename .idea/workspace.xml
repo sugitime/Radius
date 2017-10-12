@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af04fe89-9b33-44ea-ac9f-939afe066c62" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module.html" afterPath="$PROJECT_DIR$/module.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/module.js" afterPath="$PROJECT_DIR$/js/module.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/module.php" afterPath="$PROJECT_DIR$/api/module.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Radius.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,7 +42,7 @@
       <file leaf-file-name="module.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/module.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="158" column="24" selection-start="4867" selection-end="4867" vertical-scroll-proportion="0.56329113">
+            <state line="156" column="13" selection-start="4853" selection-end="4853" vertical-scroll-proportion="0.5443038">
               <folding />
             </state>
           </provider>
@@ -329,7 +326,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/module.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="158" column="24" selection-start="4867" selection-end="4867" vertical-scroll-proportion="0.56329113">
+        <state line="156" column="13" selection-start="4853" selection-end="4853" vertical-scroll-proportion="0.5443038">
           <folding />
         </state>
       </provider>
