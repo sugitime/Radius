@@ -2,15 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="af04fe89-9b33-44ea-ac9f-939afe066c62" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/dependencies.sh" afterPath="$PROJECT_DIR$/scripts/dependencies.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/module.html" afterPath="$PROJECT_DIR$/module.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/module.js" afterPath="$PROJECT_DIR$/js/module.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/module.php" afterPath="$PROJECT_DIR$/api/module.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Radius.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="af04fe89-9b33-44ea-ac9f-939afe066c62" time="1507790236521" ignored="false" />
     <file path="/dependencies.sh" changelist="af04fe89-9b33-44ea-ac9f-939afe066c62" time="1507790348117" ignored="false" />
+    <file path="/module.html" changelist="af04fe89-9b33-44ea-ac9f-939afe066c62" time="1507829401923" ignored="false" />
+    <file path="/module.php" changelist="af04fe89-9b33-44ea-ac9f-939afe066c62" time="1507840134005" ignored="false" />
+    <file path="/module.js" changelist="af04fe89-9b33-44ea-ac9f-939afe066c62" time="1507831306632" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,28 +33,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="dependencies.sh" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/dependencies.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="518" selection-end="518" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="module.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/module.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="169" column="4" selection-start="5746" selection-end="5746" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="module.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/module.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="0" selection-start="3968" selection-end="3968" vertical-scroll-proportion="-39.375">
+            <state line="191" column="10" selection-start="6011" selection-end="6011" vertical-scroll-proportion="-10.48">
               <folding />
             </state>
           </provider>
@@ -60,8 +45,30 @@
       <file leaf-file-name="module.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/module.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="44" selection-start="456" selection-end="456" vertical-scroll-proportion="0.24283935">
+            <state line="158" column="24" selection-start="4867" selection-end="4867" vertical-scroll-proportion="0.56329113">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="module.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/module.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="107" column="96" selection-start="6621" selection-end="6621" vertical-scroll-proportion="-26.583334">
+              <folding>
+                <element signature="tag#div#0;tag#div#0;tag#div#1" expanded="false" />
+                <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#2;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#td#2;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#button#0;n#td#1;n#tr#1;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -85,8 +92,8 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/scripts/dependencies.sh" />
-        <option value="$PROJECT_DIR$/js/module.js" />
         <option value="$PROJECT_DIR$/module.html" />
+        <option value="$PROJECT_DIR$/js/module.js" />
         <option value="$PROJECT_DIR$/api/module.php" />
       </list>
     </option>
@@ -288,28 +295,41 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/scripts/dependencies.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="518" selection-end="518" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/module.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="169" column="4" selection-start="5746" selection-end="5746" vertical-scroll-proportion="0.0">
+        <state line="15" column="2" selection-start="483" selection-end="517" vertical-scroll-proportion="0.27206773">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/module.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="0" selection-start="3968" selection-end="3968" vertical-scroll-proportion="-39.375">
+        <state line="107" column="96" selection-start="6621" selection-end="6621" vertical-scroll-proportion="-26.583334">
+          <folding>
+            <element signature="tag#div#0;tag#div#0;tag#div#1" expanded="false" />
+            <element signature="n#style#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#td#2;n#tr#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#0;n#td#1;n#tr#1;n#table#0;n#div#1;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/module.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="191" column="10" selection-start="6011" selection-end="6011" vertical-scroll-proportion="-10.48">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/module.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="44" selection-start="456" selection-end="456" vertical-scroll-proportion="0.24283935">
+        <state line="158" column="24" selection-start="4867" selection-end="4867" vertical-scroll-proportion="0.56329113">
           <folding />
         </state>
       </provider>

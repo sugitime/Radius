@@ -4,7 +4,7 @@ registerController('radiusController', ['$api', '$scope', '$rootScope', '$interv
 
   $scope.refreshInfo = (function() {
         $api.request({
-            module: 'RadiusPineapple',
+            module: 'Radius',
             action: "refreshInfo"
         }, function(response) {
                         $scope.title = response.title;
@@ -12,7 +12,7 @@ registerController('radiusController', ['$api', '$scope', '$rootScope', '$interv
         })
     });
 
-        $scope.refreshInfo();
+    $scope.refreshInfo();
 
 }]);
 
@@ -34,9 +34,9 @@ registerController('radiusControlsController', ['$api', '$scope', '$rootScope', 
         refreshHistory : false
     };
 
-  $scope.refreshStatus = (function() {
+    $scope.refreshStatus = (function() {
         $api.request({
-            module: "RadiusPineapple",
+            module: "Radius",
             action: "refreshStatus"
         }, function(response) {
             $scope.status = response.status;
@@ -51,55 +51,16 @@ registerController('radiusControlsController', ['$api', '$scope', '$rootScope', 
         })
     });
 
-  $scope.togglenmap = (function() {
-        if($scope.status != "Stop")
-            $scope.status = "Starting...";
-        else
-            $scope.status = "Stopping...";
-
-        $scope.statusLabel = "warning";
-        $scope.starting = true;
-
-        $api.request({
-                module: 'RadiusPineapple',
-                action: 'toggleRadius',
-                command: $rootScope.command
-            }, function(response) {
-                $timeout(function(){
-                            $rootScope.status.refreshOutput = true;
-                            $rootScope.status.refreshHistory = false;
-
-                            $scope.starting = false;
-                            $scope.refreshStatus();
-
-                            $scope.scanInterval = $interval(function(){
-                                    $api.request({
-                                            module: 'RadiusPineapple',
-                                            action: 'scanStatus'
-                                    }, function(response) {
-                                            if (response.success === true){
-                                                    $interval.cancel($scope.scanInterval);
-                                                    $rootScope.status.refreshOutput = false;
-                                                    $rootScope.status.refreshHistory = true;
-                                            }
-                                            $scope.refreshStatus();
-                                    });
-                            }, 5000);
-
-                }, 2000);
-            })
-    });
-
-  $scope.handleDependencies = (function(param) {
-    if(!$rootScope.status.installed)
+    $scope.handleDependencies = (function(param) {
+        if(!$rootScope.status.installed)
             $scope.install = "Installing...";
         else
             $scope.install = "Removing...";
 
         $api.request({
-            module: 'nmap',
+            module: 'Radius',
             action: 'handleDependencies',
-                        destination: param
+            destination: param
         }, function(response){
             if (response.success === true) {
                 $scope.installLabel = "warning";
@@ -107,7 +68,7 @@ registerController('radiusControlsController', ['$api', '$scope', '$rootScope', 
 
                 $scope.handleDependenciesInterval = $interval(function(){
                     $api.request({
-                        module: 'nmap',
+                        module: 'Radius',
                         action: 'handleDependenciesStatus'
                     }, function(response) {
                         if (response.success === true){
@@ -121,27 +82,118 @@ registerController('radiusControlsController', ['$api', '$scope', '$rootScope', 
         });
     });
 
+    $scope.toggleradius = (function() {
+        if($scope.status != "Stop")
+            $scope.status = "Starting...";
+        else
+            $scope.status = "Stopping...";
+
+        $scope.statusLabel = "warning";
+        $scope.starting = true;
+
+        $api.request({
+            module: 'Radius',
+            action: 'toggleradius'
+        }, function(response) {
+            $timeout(function(){
+                $rootScope.status.refreshOutput = true;
+                $rootScope.status.refreshHistory = false;
+
+                $scope.starting = false;
+                $scope.refreshStatus();
+
+                $scope.scanInterval = $interval(function(){
+                    $api.request({
+                        module: 'Radius',
+                        action: 'radiusStatus'
+                    }, function(response) {
+                        if (response.success === true){
+                            $interval.cancel($scope.scanInterval);
+                            $rootScope.status.refreshOutput = false;
+                            $rootScope.status.refreshHistory = true;
+                        }
+                        $scope.refreshStatus();
+                    });
+                }, 5000);
+
+            }, 2000);
+        })
+    });
+
     $scope.refreshStatus();
 }]);
 
+registerController('radiusOptionsController', ['$api', '$scope', '$rootScope', '$timeout', function($api, $scope, $rootScope, $timeout) {
+
+
+    $scope.configList = $api.request({
+        module: 'Radius',
+        action: 'configFiles'
+
+    }, function(response) {
+        $timeout(function() {
+            $scope.configList = JSON.parse(response.list);
+        }, 2000);
+
+    });
+
+    $scope.update = (function(param) {
+        $scope.configFileContent = 'Loading...';
+        $scope.configFileContent = $api.request({
+            module: 'Radius',
+            action: 'getConfigFileContent',
+            method: 'POST',
+            data: $scope.configFileName
+
+        }, function(response) {
+            $timeout(function() {
+                console.log('got it');
+                $scope.configFileContent = response.confFileContent;
+            }, 2000);
+
+        });
+        //updateConfig();
+    });
+
+
+    $scope.updateConfig = (function(param) {
+        var data = [$scope.configFileName, $scope.configFileContent];
+        var json = JSON.stringify(data);
+        $scope.configFileContent = $api.request({
+            module: 'Radius',
+            action: 'saveConfigFileContent',
+            method: 'POST',
+            data: json
+
+        }, function(response) {
+            $timeout(function() {
+                console.log('Saved!');
+                $scope.update();
+
+            }, 2000);
+
+        });
+    })
+}]);
+
 registerController('radiusOutputController', ['$api', '$scope', '$rootScope', '$interval', function($api, $scope, $rootScope, $interval) {
-  $scope.output = 'Loading...';
+    $scope.output = 'Loading...';
     $scope.filter = '';
 
     $scope.refreshLabelON = "default";
     $scope.refreshLabelOFF = "danger";
 
-  $scope.refreshOutput = (function() {
+    $scope.refreshOutput = (function() {
         $api.request({
-            module: "RadiusPineapple",
+            module: "Radius",
             action: "refreshOutput"
         }, function(response) {
             $scope.output = response;
         })
     });
 
-  $scope.toggleAutoRefresh = (function() {
-    if($scope.autoRefreshInterval)
+    $scope.toggleAutoRefresh = (function() {
+        if($scope.autoRefreshInterval)
         {
             $interval.cancel($scope.autoRefreshInterval);
             $scope.autoRefreshInterval = null;
@@ -161,10 +213,10 @@ registerController('radiusOutputController', ['$api', '$scope', '$rootScope', '$
 
     $scope.refreshOutput();
 
-        $rootScope.$watch('status.refreshOutput', function(param) {
-            if(param) {
-                $scope.refreshOutput();
-            }
-        });
+    $rootScope.$watch('status.refreshOutput', function(param) {
+        if(param) {
+            $scope.refreshOutput();
+        }
+    });
 
 }]);
